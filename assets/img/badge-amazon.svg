@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" rx="8" fill="#1A1A1A"/>
+  <text x="50" y="20" font-family="Arial,sans-serif" font-size="9" fill="#AAAAAA" letter-spacing="0.5">GET IT ON</text>
+  <text x="50" y="42" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">Amazon</text>
+  <text x="50" y="55" font-family="Arial,sans-serif" font-size="10" fill="#FF9900" letter-spacing="0.3">Appstore</text>
+  <!-- Amazon arrow icon simplified -->
+  <g transform="translate(12, 12)">
+    <path d="M14 4C8.5 4 4 8.5 4 14s4.5 10 10 10 10-4.5 10-10S19.5 4 14 4z" fill="#FF9900"/>
+    <path d="M9 13.5l3 3 7-7" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
