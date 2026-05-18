@@ -1,15 +1,23 @@
+{% assign lang = page.lang | default: 'vi' %}
+{% assign t = site.data.i18n[lang] %}
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-inner">
       <p class="footer-copy">
-        &copy; {{ 'now' | date: "%Y" }} <a href="{{ '/' | relative_url }}">{{ site.title }}</a>.
-        Được xây dựng với <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-        và lưu trú trên <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.
+        &copy; {{ 'now' | date: "%Y" }} <a href="{% if lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{{ site.title }}</a>.
+        {{ t.footer.built_with }} <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+        {{ t.footer.and_hosted }} <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.
       </p>
       <nav class="footer-nav">
         <a href="{{ '/feed.xml' | relative_url }}" class="footer-link" target="_blank" rel="noopener">RSS</a>
-        <a href="{{ '/about/' | relative_url }}" class="footer-link">Về tôi</a>
-        <a href="{{ '/archive/' | relative_url }}" class="footer-link">Lưu trữ</a>
+        {% if lang == 'en' %}
+          <a href="{{ '/en/about/' | relative_url }}" class="footer-link">{{ t.nav.about }}</a>
+          <a href="{{ '/en/archive/' | relative_url }}" class="footer-link">{{ t.nav.archive }}</a>
+        {% else %}
+          <a href="{{ '/about/' | relative_url }}" class="footer-link">{{ t.nav.about }}</a>
+          <a href="{{ '/archive/' | relative_url }}" class="footer-link">{{ t.nav.archive }}</a>
+        {% endif %}
       </nav>
     </div>
   </div>

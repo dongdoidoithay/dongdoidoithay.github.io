@@ -1,13 +1,11 @@
 ---
 layout: page
-title: Lưu trữ
-subtitle: Tất cả bài viết theo thời gian
-permalink: /archive/
-lang: vi
-translation_url: /en/archive/
+title: Archive
+subtitle: All posts by date
+permalink: /en/archive/
 ---
 
-{% assign lang_posts = site.posts | where: "lang", "vi" %}
+{% assign lang_posts = site.posts | where: "lang", "en" %}
 {% assign posts_by_year = lang_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 {% for year_group in posts_by_year %}
@@ -16,7 +14,7 @@ translation_url: /en/archive/
   <ul class="archive-list">
     {% for post in year_group.items %}
     <li class="archive-item">
-      <span class="archive-date">{{ post.date | date: "%d/%m" }}</span>
+      <span class="archive-date">{{ post.date | date: "%m/%d" }}</span>
       <span class="archive-title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </span>

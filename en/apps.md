@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Ứng dụng
-subtitle: Các ứng dụng được phát triển bởi FreeGameStudio
-permalink: /apps/
-lang: vi
-translation_url: /en/apps/
+title: Apps
+subtitle: Applications developed by FreeGameStudio
+permalink: /en/apps/
 ---
 
 <div class="apps-grid">
@@ -17,15 +15,15 @@ translation_url: /en/apps/
       <div class="app-info">
         <h3 class="app-name">Read Manga Online</h3>
         <p class="app-dev">FreeGameStudio</p>
-        <span class="app-badge">Miễn phí</span>
+        <span class="app-badge">Free</span>
       </div>
     </div>
-    <p class="app-desc">Đọc manga trực tuyến và ngoại tuyến. Cập nhật chapter mới liên tục, hỗ trợ tiếng Việt và tiếng Anh.</p>
+    <p class="app-desc">Read manga online and offline. Continuously updated with new chapters, supports both Vietnamese and English.</p>
     <div class="app-stores">
-      <a href="https://apkpure.com/p/com.dongdoihy.appmangavn" class="store-badge" target="_blank" rel="noopener" title="Tải trên APKPure">
+      <a href="https://apkpure.com/p/com.dongdoihy.appmangavn" class="store-badge" target="_blank" rel="noopener" title="Download on APKPure">
         <img src="{{ '/assets/img/badge-apkpure.svg' | relative_url }}" alt="Get it on APKPure" width="160" height="48">
       </a>
-      <a href="https://www.amazon.com/gp/product/B0FH7DJ7HY" class="store-badge" target="_blank" rel="noopener" title="Tải trên Amazon Appstore">
+      <a href="https://www.amazon.com/gp/product/B0FH7DJ7HY" class="store-badge" target="_blank" rel="noopener" title="Download on Amazon Appstore">
         <img src="{{ '/assets/img/badge-amazon.svg' | relative_url }}" alt="Get it on Amazon Appstore" width="160" height="48">
       </a>
     </div>
@@ -39,12 +37,12 @@ translation_url: /en/apps/
       <div class="app-info">
         <h3 class="app-name">Comic DC - Marvel</h3>
         <p class="app-dev">FreeGameStudio</p>
-        <span class="app-badge">Miễn phí</span>
+        <span class="app-badge">Free</span>
       </div>
     </div>
-    <p class="app-desc">Đọc truyện tranh DC và Marvel trực tuyến & ngoại tuyến. Kho nội dung phong phú từ hai vũ trụ siêu anh hùng lớn nhất thế giới.</p>
+    <p class="app-desc">Read DC and Marvel comics online & offline. A rich library from the two biggest superhero universes in the world.</p>
     <div class="app-stores">
-      <a href="https://www.amazon.com/gp/product/B0FHG8C3TM" class="store-badge" target="_blank" rel="noopener" title="Tải trên Amazon Appstore">
+      <a href="https://www.amazon.com/gp/product/B0FHG8C3TM" class="store-badge" target="_blank" rel="noopener" title="Download on Amazon Appstore">
         <img src="{{ '/assets/img/badge-amazon.svg' | relative_url }}" alt="Get it on Amazon Appstore" width="160" height="48">
       </a>
     </div>

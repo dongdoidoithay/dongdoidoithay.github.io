@@ -1,11 +1,22 @@
 ---
 layout: default
 ---
+{% assign lang = page.lang | default: 'vi' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign lang_posts = site.posts | where: "lang", lang %}
+{% assign current_index = nil %}
+{% for p in lang_posts %}
+  {% if p.url == page.url %}{% assign current_index = forloop.index0 %}{% endif %}
+{% endfor %}
+{% if current_index %}{% assign prev_index = current_index | minus: 1 %}{% assign next_index = current_index | plus: 1 %}{% endif %}
+{% assign prev_post = lang_posts[prev_index] %}
+{% assign next_post = lang_posts[next_index] %}
+
 <article class="post-full">
   <header class="post-header">
     <div class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%d tháng %m, %Y" }}
+        {% if lang == 'en' %}{{ page.date | date: "%B %d, %Y" }}{% else %}{{ page.date | date: "%d tháng %m, %Y" }}{% endif %}
       </time>
       {% if page.categories.size > 0 %}
         <span class="separator">·</span>
@@ -31,7 +42,7 @@ layout: default
   <footer class="post-footer">
     {% if page.tags.size > 0 %}
       <div class="post-tags">
-        <span>Tags:</span>
+        <span>{{ t.post.tags }}</span>
         {% for tag in page.tags %}
           <a href="/tag/{{ tag | slugify }}/" class="tag">#{{ tag }}</a>
         {% endfor %}
@@ -39,16 +50,16 @@ layout: default
     {% endif %}
 
     <nav class="post-nav">
-      {% if page.previous %}
-        <a href="{{ page.previous.url | relative_url }}" class="post-nav-btn post-nav-prev">
-          <span>← Bài trước</span>
-          <strong>{{ page.previous.title }}</strong>
+      {% if prev_post %}
+        <a href="{{ prev_post.url | relative_url }}" class="post-nav-btn post-nav-prev">
+          <span>{{ t.post.prev }}</span>
+          <strong>{{ prev_post.title }}</strong>
         </a>
       {% endif %}
-      {% if page.next %}
-        <a href="{{ page.next.url | relative_url }}" class="post-nav-btn post-nav-next">
-          <span>Bài sau →</span>
-          <strong>{{ page.next.title }}</strong>
+      {% if next_post %}
+        <a href="{{ next_post.url | relative_url }}" class="post-nav-btn post-nav-next">
+          <span>{{ t.post.next }}</span>
+          <strong>{{ next_post.title }}</strong>
         </a>
       {% endif %}
     </nav>

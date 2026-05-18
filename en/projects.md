@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Sản phẩm & Dự án
-subtitle: Phần mềm, game và những dự án đang được xây dựng
-permalink: /projects/
-lang: vi
-translation_url: /en/projects/
+title: Products & Projects
+subtitle: Software, games, and projects in the making
+permalink: /en/projects/
 ---
 
 <div class="projects-page">
@@ -13,7 +11,7 @@ translation_url: /en/projects/
   <section class="project-section">
     <div class="project-section-label">
       <span class="label-dot label-dot--live"></span>
-      Đã phát hành
+      Released
     </div>
 
     <div class="project-grid">
@@ -29,7 +27,7 @@ translation_url: /en/projects/
           </div>
         </div>
         <h3 class="project-name">Read Manga Online</h3>
-        <p class="project-desc">Đọc manga trực tuyến và ngoại tuyến. Cập nhật chapter mới liên tục, hỗ trợ tiếng Việt và tiếng Anh.</p>
+        <p class="project-desc">Read manga online and offline. Continuously updated with new chapters, supports Vietnamese and English.</p>
         <div class="project-tags">
           <span class="tag-pill">Android</span>
           <span class="tag-pill">Manga</span>
@@ -52,7 +50,7 @@ translation_url: /en/projects/
           </div>
         </div>
         <h3 class="project-name">Comic DC - Marvel</h3>
-        <p class="project-desc">Đọc truyện tranh DC và Marvel trực tuyến & ngoại tuyến. Kho nội dung phong phú từ hai vũ trụ siêu anh hùng lớn nhất thế giới.</p>
+        <p class="project-desc">Read DC and Marvel comics online & offline. A rich library from the two biggest superhero universes in the world.</p>
         <div class="project-tags">
           <span class="tag-pill">Android</span>
           <span class="tag-pill">Comics</span>
@@ -70,7 +68,7 @@ translation_url: /en/projects/
   <section class="project-section">
     <div class="project-section-label">
       <span class="label-dot label-dot--wip"></span>
-      Đang phát triển
+      In Development
     </div>
 
     <div class="project-grid">
@@ -81,14 +79,14 @@ translation_url: /en/projects/
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" fill="none"><rect width="40" height="40" rx="10" fill="var(--border)"/><path d="M13 20h14M20 13v14" stroke="var(--text-light)" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
           <div class="project-meta">
-            <span class="project-status project-status--wip">Đang làm</span>
-            <span class="project-type">Dự án</span>
+            <span class="project-status project-status--wip">In Dev</span>
+            <span class="project-type">Project</span>
           </div>
         </div>
-        <h3 class="project-name">Dự án mới <span class="wip-badge">TBA</span></h3>
-        <p class="project-desc">Thông tin sẽ được cập nhật sớm. Theo dõi blog để không bỏ lỡ nhé!</p>
+        <h3 class="project-name">New Project <span class="wip-badge">TBA</span></h3>
+        <p class="project-desc">Details will be announced soon. Follow the blog to stay updated!</p>
         <div class="project-tags">
-          <span class="tag-pill tag-pill--muted">Sắp thông báo</span>
+          <span class="tag-pill tag-pill--muted">To be announced</span>
         </div>
       </div>
 
@@ -99,7 +97,7 @@ translation_url: /en/projects/
   <section class="project-section">
     <div class="project-section-label">
       <span class="label-dot label-dot--soon"></span>
-      Sắp ra mắt
+      Coming Soon
     </div>
 
     <div class="project-grid">
@@ -110,17 +108,17 @@ translation_url: /en/projects/
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" fill="none"><rect width="40" height="40" rx="10" fill="var(--accent-light)"/><circle cx="20" cy="20" r="7" stroke="var(--accent)" stroke-width="2"/><path d="M20 13V20l4 4" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="project-meta">
-            <span class="project-status project-status--soon">Sắp ra mắt</span>
-            <span class="project-type">Dự án</span>
+            <span class="project-status project-status--soon">Coming Soon</span>
+            <span class="project-type">Project</span>
           </div>
         </div>
         <h3 class="project-name">Coming Soon <span class="soon-badge">2026</span></h3>
-        <p class="project-desc">Một dự án thú vị đang trong giai đoạn hoàn thiện. Đăng ký nhận thông báo qua RSS để biết ngay khi ra mắt.</p>
+        <p class="project-desc">An exciting project in its final stages. Subscribe via RSS to be notified the moment it launches.</p>
         <div class="project-tags">
-          <span class="tag-pill tag-pill--soon">Sắp công bố</span>
+          <span class="tag-pill tag-pill--soon">Announcement pending</span>
         </div>
         <div class="project-links">
-          <a href="{{ '/feed.xml' | relative_url }}" class="project-link" target="_blank" rel="noopener">Theo dõi RSS</a>
+          <a href="{{ '/feed.xml' | relative_url }}" class="project-link" target="_blank" rel="noopener">Follow RSS</a>
         </div>
       </div>
 

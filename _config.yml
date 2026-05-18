@@ -33,10 +33,19 @@ paginate_path: "/page:num/"
 defaults:
   - scope:
       path: ""
+    values:
+      lang: vi
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
       author: "dongdoihy"
+      lang: vi
+  - scope:
+      path: "en"
+    values:
+      lang: en
 
 # Exclude from processing
 exclude:
@@ -45,6 +54,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
-
-lang: vi
 

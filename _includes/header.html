@@ -1,21 +1,43 @@
+{% assign lang = page.lang | default: 'vi' %}
+{% assign t = site.data.i18n[lang] %}
+{% if lang == 'en' %}
+  {% if page.translation_url %}{% assign other_url = page.translation_url %}{% else %}{% assign other_url = page.url | remove_first: '/en' %}{% endif %}
+  {% assign other_lang = 'VI' %}
+{% else %}
+  {% if page.translation_url %}{% assign other_url = page.translation_url %}{% else %}{% assign other_url = '/en' | append: page.url %}{% endif %}
+  {% assign other_lang = 'EN' %}
+{% endif %}
+
 <header class="site-header">
   <div class="container">
-    <a href="{{ '/' | relative_url }}" class="site-logo">
+    <a href="{% if lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="site-logo">
       <span class="logo-text">{{ site.title }}</span>
     </a>
 
     <nav class="site-nav">
-      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Trang chủ</a>
-      <a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url contains '/projects' %} active{% endif %}">Dự án</a>
-      <a href="{{ '/apps/' | relative_url }}" class="nav-link{% if page.url contains '/apps' %} active{% endif %}">Ứng dụng</a>
-      <a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url contains '/about' %} active{% endif %}">Về tôi</a>
-      <a href="{{ '/archive/' | relative_url }}" class="nav-link{% if page.url contains '/archive' %} active{% endif %}">Lưu trữ</a>
+      {% if lang == 'en' %}
+        <a href="{{ '/en/' | relative_url }}" class="nav-link{% if page.url == '/en/' %} active{% endif %}">{{ t.nav.home }}</a>
+        <a href="{{ '/en/projects/' | relative_url }}" class="nav-link{% if page.url contains '/en/projects' %} active{% endif %}">{{ t.nav.projects }}</a>
+        <a href="{{ '/en/apps/' | relative_url }}" class="nav-link{% if page.url contains '/en/apps' %} active{% endif %}">{{ t.nav.apps }}</a>
+        <a href="{{ '/en/about/' | relative_url }}" class="nav-link{% if page.url contains '/en/about' %} active{% endif %}">{{ t.nav.about }}</a>
+        <a href="{{ '/en/archive/' | relative_url }}" class="nav-link{% if page.url contains '/en/archive' %} active{% endif %}">{{ t.nav.archive }}</a>
+      {% else %}
+        <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">{{ t.nav.home }}</a>
+        <a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url contains '/projects' %} active{% endif %}">{{ t.nav.projects }}</a>
+        <a href="{{ '/apps/' | relative_url }}" class="nav-link{% if page.url contains '/apps' %} active{% endif %}">{{ t.nav.apps }}</a>
+        <a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url contains '/about' %} active{% endif %}">{{ t.nav.about }}</a>
+        <a href="{{ '/archive/' | relative_url }}" class="nav-link{% if page.url contains '/archive' %} active{% endif %}">{{ t.nav.archive }}</a>
+      {% endif %}
     </nav>
 
-    <button class="theme-toggle" id="themeToggle" title="Chuyển giao diện sáng/tối" aria-label="Toggle theme">
-      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
+    <div class="header-actions">
+      <a href="{{ other_url | relative_url }}" class="lang-switcher" title="Switch language">{{ other_lang }}</a>
+
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 

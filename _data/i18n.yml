@@ -1,0 +1,39 @@
+vi:
+  tagline: "Những mảnh đời, những đổi thay..."
+  nav:
+    home: "Trang chủ"
+    projects: "Dự án"
+    apps: "Ứng dụng"
+    about: "Về tôi"
+    archive: "Lưu trữ"
+  home:
+    latest_posts: "Bài viết mới nhất"
+    read_more: "Đọc tiếp →"
+    no_posts: "Chưa có bài viết nào. Hãy quay lại sau nhé!"
+  post:
+    prev: "← Bài trước"
+    next: "Bài sau →"
+    tags: "Tags:"
+  footer:
+    built_with: "Được xây dựng với"
+    and_hosted: "và lưu trú trên"
+
+en:
+  tagline: "Moments of life, ever-changing..."
+  nav:
+    home: "Home"
+    projects: "Projects"
+    apps: "Apps"
+    about: "About"
+    archive: "Archive"
+  home:
+    latest_posts: "Latest Posts"
+    read_more: "Read more →"
+    no_posts: "No posts yet. Check back soon!"
+  post:
+    prev: "← Previous"
+    next: "Next →"
+    tags: "Tags:"
+  footer:
+    built_with: "Built with"
+    and_hosted: "and hosted on"

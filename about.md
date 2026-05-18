@@ -3,6 +3,8 @@ layout: page
 title: Về tôi
 subtitle: Xin chào, tôi là dongdoihy
 permalink: /about/
+lang: vi
+translation_url: /en/about/
 ---
 
 Xin chào! Tôi là **dongdoihy** — người viết những dòng suy nghĩ về cuộc sống luôn đổi thay.

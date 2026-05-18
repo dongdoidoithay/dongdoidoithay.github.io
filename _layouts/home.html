@@ -1,18 +1,22 @@
 ---
 layout: default
 ---
+{% assign lang = page.lang | default: 'vi' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign lang_posts = site.posts | where: "lang", lang %}
+
 <div class="home-wrapper">
   <div class="hero">
     <h1 class="hero-title">{{ site.title }}</h1>
-    <p class="hero-tagline">{{ site.tagline }}</p>
+    <p class="hero-tagline">{{ t.tagline }}</p>
   </div>
 
   <section class="posts-section">
-    <h2 class="section-title">Bài viết mới nhất</h2>
+    <h2 class="section-title">{{ t.home.latest_posts }}</h2>
 
-    {% if site.posts.size > 0 %}
+    {% if lang_posts.size > 0 %}
       <div class="post-list">
-        {% for post in paginator.posts %}
+        {% for post in lang_posts %}
           <article class="post-card">
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_xmlschema }}">
@@ -32,25 +36,12 @@ layout: default
             {% if post.excerpt %}
               <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
             {% endif %}
-            <a href="{{ post.url | relative_url }}" class="read-more">Đọc tiếp →</a>
+            <a href="{{ post.url | relative_url }}" class="read-more">{{ t.home.read_more }}</a>
           </article>
         {% endfor %}
       </div>
-
-      {% if paginator.total_pages > 1 %}
-        <nav class="pagination">
-          {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-btn">← Mới hơn</a>
-          {% endif %}
-          <span class="pagination-info">Trang {{ paginator.page }} / {{ paginator.total_pages }}</span>
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-btn">Cũ hơn →</a>
-          {% endif %}
-        </nav>
-      {% endif %}
-
     {% else %}
-      <p class="no-posts">Chưa có bài viết nào. Hãy quay lại sau nhé!</p>
+      <p class="no-posts">{{ t.home.no_posts }}</p>
     {% endif %}
   </section>
 </div>
