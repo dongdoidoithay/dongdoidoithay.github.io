@@ -1,3 +1,50 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+# Site settings
+title: Đong Đời Đổi Thay
+tagline: "Những mảnh đời, những đổi thay..."
+description: >-
+  Blog cá nhân - nơi ghi lại những suy nghĩ, câu chuyện và khoảnh khắc
+  của cuộc sống luôn đổi thay.
+author:
+  name: dongdoihy
+  email: ""
+
+url: "https://dongdoidoithay.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Pagination
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+
+paginate: 5
+paginate_path: "/page:num/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "dongdoihy"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+lang: vi
+
